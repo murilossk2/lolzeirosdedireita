@@ -1,0 +1,613 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Roteiro de Macro - Lolzeiros de Direita 2025</title>
+    <style>
+        :root {
+            --primary: #01603e;
+            --secondary: #004c31;
+            --accent: #ffd700;
+            --text: #ffffff;
+            --highlight: #0066cc;
+            --dark-bg: #003525;
+            --light-bg: #017a4e;
+            --yellow-accent: #ffd700;
+            --blue-accent: #002776;
+        }
+        
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+        
+        body {
+            background-color: var(--primary);
+            color: var(--text);
+            line-height: 1.6;
+            background-image: linear-gradient(135deg, var(--primary) 0%, var(--dark-bg) 100%);
+        }
+        
+        header {
+            background-color: var(--dark-bg);
+            padding: 2rem 0;
+            text-align: center;
+            border-bottom: 3px solid var(--yellow-accent);
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
+            position: sticky;
+            top: 0;
+            z-index: 100;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+        
+        h1 {
+            color: var(--yellow-accent);
+            font-size: 2.5rem;
+            margin-bottom: 0.5rem;
+            text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.5);
+        }
+        
+        .subtitle {
+            font-size: 1.2rem;
+            color: #ffffff;
+        }
+        
+        .team-logo {
+            width: 120px;
+            height: 120px;
+            margin-bottom: 1rem;
+            filter: drop-shadow(2px 2px 5px rgba(0, 0, 0, 0.5));
+        }
+        
+        .header-content {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            flex-wrap: wrap;
+            gap: 2rem;
+            max-width: 900px;
+            margin: 0 auto;
+        }
+        
+        .header-text {
+            flex: 1;
+            min-width: 300px;
+        }
+        
+        nav {
+            background-color: var(--secondary);
+            display: flex;
+            justify-content: center;
+            padding: 1rem 0;
+            flex-wrap: wrap;
+            position: sticky;
+            top: 184px;
+            z-index: 99;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+        }
+        
+        .nav-btn {
+            background-color: var(--light-bg);
+            color: var(--text);
+            border: 1px solid var(--yellow-accent);
+            padding: 0.5rem 1rem;
+            margin: 0.5rem;
+            border-radius: 5px;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            font-weight: bold;
+        }
+        
+        .nav-btn:hover {
+            background-color: var(--yellow-accent);
+            color: var(--dark-bg);
+        }
+        
+        main {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 2rem;
+        }
+        
+        .timeline {
+            position: relative;
+            margin: 2rem 0;
+        }
+        
+        .timeline::before {
+            content: '';
+            position: absolute;
+            width: 6px;
+            background: linear-gradient(to bottom, var(--yellow-accent), var(--blue-accent));
+            top: 0;
+            bottom: 0;
+            left: 50%;
+            margin-left: -3px;
+            border-radius: 10px;
+        }
+        
+        .phase {
+            padding: 2rem;
+            background-color: var(--light-bg);
+            margin: 2rem 0;
+            border-radius: 10px;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+            position: relative;
+            scroll-margin-top: 250px;
+            border-left: 4px solid var(--yellow-accent);
+            border-right: 4px solid var(--blue-accent);
+        }
+        
+        .phase-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 1rem;
+            border-bottom: 2px solid var(--yellow-accent);
+            padding-bottom: 0.5rem;
+        }
+        
+        .phase-time {
+            font-size: 1.5rem;
+            font-weight: bold;
+            color: var(--yellow-accent);
+        }
+        
+        .phase-name {
+            font-size: 1.5rem;
+            font-weight: bold;
+        }
+        
+        .objective {
+            background-color: rgba(255, 215, 0, 0.1);
+            padding: 1rem;
+            border-left: 4px solid var(--yellow-accent);
+            margin: 1rem 0;
+            border-radius: 0 5px 5px 0;
+        }
+        
+        .objective h3 {
+            color: var(--yellow-accent);
+            margin-bottom: 0.5rem;
+        }
+        
+        ul {
+            padding-left: 1.5rem;
+            margin: 1rem 0;
+        }
+        
+        li {
+            margin-bottom: 0.5rem;
+        }
+        
+        .checklist {
+            background-color: rgba(0, 39, 118, 0.1);
+            padding: 1rem;
+            border-left: 4px solid var(--blue-accent);
+            margin: 1rem 0;
+            border-radius: 0 5px 5px 0;
+        }
+        
+        .checklist h3 {
+            color: var(--blue-accent);
+            margin-bottom: 0.5rem;
+        }
+        
+        .roles-section {
+            margin-top: 3rem;
+        }
+        
+        .role-table {
+            width: 100%;
+            border-collapse: collapse;
+            margin: 2rem 0;
+            border: 2px solid var(--yellow-accent);
+        }
+        
+        .role-table th, .role-table td {
+            padding: 1rem;
+            text-align: left;
+            border-bottom: 1px solid var(--blue-accent);
+        }
+        
+        .role-table th {
+            background-color: var(--dark-bg);
+            color: var(--yellow-accent);
+        }
+        
+        .role-table tr:nth-child(even) {
+            background-color: rgba(1, 96, 62, 0.7);
+        }
+        
+        .role-table tr:hover {
+            background-color: rgba(255, 215, 0, 0.1);
+        }
+        
+        .icon {
+            font-size: 1.2rem;
+            margin-right: 0.5rem;
+            color: var(--accent);
+        }
+        
+        footer {
+            background-color: var(--dark-bg);
+            text-align: center;
+            padding: 2rem;
+            margin-top: 3rem;
+            border-top: 3px solid var(--yellow-accent);
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: 1rem;
+        }
+        
+        .footer-logo {
+            width: 80px;
+            height: 80px;
+        }
+        
+        .highlight {
+            color: var(--yellow-accent);
+            font-weight: bold;
+        }
+        
+        .top-btn {
+            position: fixed;
+            bottom: 30px;
+            right: 30px;
+            background-color: var(--yellow-accent);
+            color: var(--dark-bg);
+            width: 50px;
+            height: 50px;
+            border-radius: 50%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            cursor: pointer;
+            font-size: 1.5rem;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+            transition: all 0.3s ease;
+            z-index: 100;
+            font-weight: bold;
+        }
+        
+        .top-btn:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 6px 15px rgba(0, 0, 0, 0.4);
+        }
+        
+        .patriotic-border {
+            border: 4px solid transparent;
+            border-image: linear-gradient(to right, var(--yellow-accent), var(--blue-accent)) 1;
+            padding: 10px;
+            border-radius: 5px;
+        }
+        
+        @media (max-width: 768px) {
+            .timeline::before {
+                left: 20px;
+            }
+            
+            .phase {
+                width: 90%;
+                margin-left: auto;
+            }
+            
+            .phase-header {
+                flex-direction: column;
+                align-items: flex-start;
+            }
+            
+            nav {
+                position: static;
+            }
+            
+            header {
+                position: static;
+            }
+            
+            .phase {
+                scroll-margin-top: 20px;
+            }
+            
+            .header-content {
+                flex-direction: column;
+            }
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <div class="header-content">
+            <img src="https://i.postimg.cc/W3rc9Jfk/a-dynamic-logo-design-featuring-lolzeiro-vm0gm-Eo-ZRvy-9-Yf-OK1-Zepw-ULd3-X8-MUSt6-HSt877m452g.jpg" alt="Logo Lolzeiros de Direita" class="team-logo">
+            <div class="header-text">
+                <h1>📘 ROTEIRO DE MACRO – LOLZEIROS DE DIREITA 2025</h1>
+                <p class="subtitle">Guia de estratégia patriota para treinos e análises de partidas</p>
+            </div>
+        </div>
+    </header>
+    
+    <nav>
+        <button class="nav-btn" onclick="scrollToSection('phase1')">0:00-5:00</button>
+        <button class="nav-btn" onclick="scrollToSection('phase2')">5:00-8:00</button>
+        <button class="nav-btn" onclick="scrollToSection('phase3')">8:00-13:30</button>
+        <button class="nav-btn" onclick="scrollToSection('phase4')">13:30-17:00</button>
+        <button class="nav-btn" onclick="scrollToSection('phase5')">17:00-21:00</button>
+        <button class="nav-btn" onclick="scrollToSection('phase6')">21:00-27:00</button>
+        <button class="nav-btn" onclick="scrollToSection('phase7')">27:00+</button>
+        <button class="nav-btn" onclick="scrollToSection('roles')">Funções</button>
+    </nav>
+    
+    <main>
+        <div class="timeline">
+            <section id="phase1" class="phase">
+                <div class="phase-header">
+                    <div class="phase-time">⏱️ 0:00 – 5:00</div>
+                    <div class="phase-name">Early Early Game</div>
+                </div>
+                
+                <div class="objective">
+                    <h3>🎯 Objetivo</h3>
+                    <p>Garantir pressão de lanes, controlar jungle tracking, preparar pro topside.</p>
+                </div>
+                
+                <ul>
+                    <li>Jungle começa <span class="highlight">bot side</span>, patha pra <span class="highlight">top side</span> com clear adaptativo (full clear se matchup favorável, ou 3 campos + gank/invade se houver oportunidade).</li>
+                    <li>Suporte coloca ward defensiva/invasiva e volta base pra pink.</li>
+                    <li>Mid e bot controlam a wave para resetar entre <span class="highlight">3:30 e 4:30</span>, garantindo tempo pro suporte.</li>
+                </ul>
+                
+                <div class="checklist">
+                    <h3>✅ Checklist</h3>
+                    <ul>
+                        <li>Jungle foi pro topside?</li>
+                        <li>Mid/bot resetaram antes do 5?</li>
+                        <li>Suporte com pink na entrada da jungle?</li>
+                        <li>Jungle comunicou posição do inimigo e tempo de feitiço?</li>
+                    </ul>
+                </div>
+            </section>
+            
+            <section id="phase2" class="phase">
+                <div class="phase-header">
+                    <div class="phase-time">⏱️ 5:00 – 8:00</div>
+                    <div class="phase-name">Vastilarvas (Voidgrubs)</div>
+                </div>
+                
+                <div class="objective">
+                    <h3>🎯 Objetivo</h3>
+                    <p>Lutar ou garantir as Vastilarvas no top com vantagem real.</p>
+                </div>
+                
+                <ul>
+                    <li>Rotação de <span class="highlight">Mid + Jungle + eventualmente Sup</span> pro topside.</li>
+                    <li>Só lutar se: wave de Top/Mid puxada, cooldowns disponíveis e visão garantida.</li>
+                    <li>Se ganhar a luta, levar T1 top com ajuda das larvas, reset geral e rotação bot.</li>
+                </ul>
+                
+                <div class="checklist">
+                    <h3>✅ Checklist</h3>
+                    <ul>
+                        <li>Vastilarvas feitas?</li>
+                        <li>T1 top com pressão?</li>
+                        <li>Reset geral depois da luta?</li>
+                        <li>Condições reais de lutar (prioridade/recursos)?</li>
+                    </ul>
+                </div>
+            </section>
+            
+            <section id="phase3" class="phase">
+                <div class="phase-header">
+                    <div class="phase-time">⏱️ 8:00 – 13:30</div>
+                    <div class="phase-name">Dragão 1 e transição de lanes</div>
+                </div>
+                
+                <div class="objective">
+                    <h3>🎯 Objetivo</h3>
+                    <p>Visão bot side e dragão se seguro.</p>
+                </div>
+                
+                <ul>
+                    <li>Controle de visão bot, pressão em bot/mid.</li>
+                    <li>Dragão feito com visão + prioridade de wave.</li>
+                    <li>Confirmar se ADC tem mítico por volta de 9–10min antes de contestar.</li>
+                    <li>Jungle invade se houver vantagem.</li>
+                </ul>
+                
+                <div class="checklist">
+                    <h3>✅ Checklist</h3>
+                    <ul>
+                        <li>Mid puxado antes do dragão?</li>
+                        <li>Visão no arbusto do rio e entrada da jungle?</li>
+                        <li>Pink no pit?</li>
+                        <li>ADC com mítico?</li>
+                    </ul>
+                </div>
+            </section>
+            
+            <section id="phase4" class="phase">
+                <div class="phase-header">
+                    <div class="phase-time">⏱️ 13:30 – 17:00</div>
+                    <div class="phase-name">Rotações e Dragão 2</div>
+                </div>
+                
+                <div class="objective">
+                    <h3>🎯 Objetivo</h3>
+                    <p>Abrir mapa e preparar dragão 2.</p>
+                </div>
+                
+                <ul>
+                    <li>Usar Herald/larvas pra abrir T1 mid.</li>
+                    <li><span class="highlight">Troca de side:</span> bot vai top, top vai bot.</li>
+                    <li>Setup de visão começa aos <span class="highlight">13:50</span>, com foco nos flancos.</li>
+                </ul>
+                
+                <div class="checklist">
+                    <h3>✅ Checklist</h3>
+                    <ul>
+                        <li>T1 mid destruída?</li>
+                        <li>Troca de side feita?</li>
+                        <li>Setup de visão iniciado antes de 14:10?</li>
+                    </ul>
+                </div>
+            </section>
+            
+            <section id="phase5" class="phase">
+                <div class="phase-header">
+                    <div class="phase-time">⏱️ 17:00 – 21:00</div>
+                    <div class="phase-name">Soul Point ou Controle do Top</div>
+                </div>
+                
+                <div class="objective">
+                    <h3>🎯 Objetivo</h3>
+                    <p>Alma ou força Baron, conforme jogo.</p>
+                </div>
+                
+                <ul>
+                    <li>Dragão 3 é prioridade, se perder foco é Barão.</li>
+                    <li>Mid sempre puxado antes de qualquer engage.</li>
+                    <li>Top guarda TP e comunica possível uso 1 min antes.</li>
+                </ul>
+                
+                <div class="checklist">
+                    <h3>✅ Checklist</h3>
+                    <ul>
+                        <li>Dragão 3 controlado?</li>
+                        <li>Visão topside colocada?</li>
+                        <li>Mid puxado?</li>
+                        <li>TP do top disponível?</li>
+                    </ul>
+                </div>
+            </section>
+            
+            <section id="phase6" class="phase">
+                <div class="phase-header">
+                    <div class="phase-time">⏱️ 21:00 – 27:00</div>
+                    <div class="phase-name">Baron e Side Lanes</div>
+                </div>
+                
+                <div class="objective">
+                    <h3>🎯 Objetivo</h3>
+                    <p>Pressão nas sides + controle Baron.</p>
+                </div>
+                
+                <ul>
+                    <li>Split pusher com TP no bot.</li>
+                    <li>Mid + ADC jogam no meio com sup/jungle.</li>
+                    <li>Pickoffs e pressão em 3 lanes.</li>
+                    <li>Só startar Barão com: 1 pickoff feito, visão negada e waves puxadas.</li>
+                </ul>
+                
+                <div class="checklist">
+                    <h3>✅ Checklist</h3>
+                    <ul>
+                        <li>Split ativo?</li>
+                        <li>Visão Baron dominada?</li>
+                        <li>Supervision no mid?</li>
+                        <li>Condição real de Baron?</li>
+                    </ul>
+                </div>
+            </section>
+            
+            <section id="phase7" class="phase">
+                <div class="phase-header">
+                    <div class="phase-time">⏱️ 27:00+</div>
+                    <div class="phase-name">Finalização com Alma e Barão</div>
+                </div>
+                
+                <div class="objective">
+                    <h3>🎯 Objetivo</h3>
+                    <p>Alma + Barão + inibidores.</p>
+                </div>
+                
+                <ul>
+                    <li>Alma garantida = reset e Baron.</li>
+                    <li>Com Baron: split 1-3-1 ou 1-4.</li>
+                    <li>Antes de siege final, puxar 2 waves nas sides e sincronizar com supers no mid.</li>
+                </ul>
+                
+                <div class="checklist">
+                    <h3>✅ Checklist</h3>
+                    <ul>
+                        <li>Alma garantida?</li>
+                        <li>Side lanes puxadas?</li>
+                        <li>Inibidor aberto com Baron?</li>
+                        <li>Waves sincronizadas?</li>
+                    </ul>
+                </div>
+            </section>
+        </div>
+        
+        <section id="roles" class="roles-section patriotic-border">
+            <h2>🧭 FUNÇÃO POR ROLE (MACRO)</h2>
+            <table class="role-table">
+                <thead>
+                    <tr>
+                        <th>Função</th>
+                        <th>Macro Papel</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td><strong>Top</strong></td>
+                        <td>Split push no mid/late game, TP pra objetivos, slowpush em side. Comunicar TP e estado da wave.</td>
+                    </tr>
+                    <tr>
+                        <td><strong>Jungle</strong></td>
+                        <td>Tracking do jungle inimigo, controle de visão, presença em objetivos. Comunicar timers de feitiços e posição do inimigo.</td>
+                    </tr>
+                    <tr>
+                        <td><strong>Mid</strong></td>
+                        <td>Puxar wave, rotacionar pra top/bot, pressão de mapa constante. Comunicar rotação e cooldowns.</td>
+                    </tr>
+                    <tr>
+                        <td><strong>ADC</strong></td>
+                        <td>Farm constante, rotacionar com suporte, dano em objetivos. Checar se está com itens power spike antes de luta.</td>
+                    </tr>
+                    <tr>
+                        <td><strong>Support</strong></td>
+                        <td>Controle de visão, roaming com jungle, setup de objetivos. Comunicar wards e tempo de pinks chave.</td>
+                    </tr>
+                </tbody>
+            </table>
+        </section>
+    </main>
+    
+    <div class="top-btn" onclick="scrollToTop()">↑</div>
+    
+    <footer>
+        <img src="https://i.postimg.cc/W3rc9Jfk/a-dynamic-logo-design-featuring-lolzeiro-vm0gm-Eo-ZRvy-9-Yf-OK1-Zepw-ULd3-X8-MUSt6-HSt877m452g.jpg" alt="Logo Lolzeiros de Direita" class="footer-logo">
+        <p>© Lolzeiros de Direita 2025 | Roteiro de Macro Patriota</p>
+    </footer>
+    
+    <script>
+        function scrollToSection(id) {
+            const element = document.getElementById(id);
+            if (element) {
+                element.scrollIntoView({ behavior: 'smooth' });
+            }
+        }
+        
+        function scrollToTop() {
+            window.scrollTo({
+                top: 0,
+                behavior: 'smooth'
+            });
+        }
+        
+        window.addEventListener('scroll', function() {
+            const topBtn = document.querySelector('.top-btn');
+            if (window.pageYOffset > 300) {
+                topBtn.style.display = 'flex';
+            } else {
+                topBtn.style.display = 'none';
+            }
+        });
+    </script>
+</body>
+</html>
